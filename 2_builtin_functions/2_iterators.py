@@ -1,6 +1,6 @@
-def main():
+if __name__ == "__main__":
     days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    daysFr = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
+    days_fr = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
 
     # use iter() to create an iterator over a collection
     i = iter(days)
@@ -22,9 +22,5 @@ def main():
         print(i, d)
 
     # use zip to combine sequences
-    for i, (d, dFr) in enumerate(zip(days, daysFr), start=1):
-        print(f"{i} {d} = {dFr} in French")
-
-
-if __name__ == "__main__":
-    main()
+    for i, (d, d_fr) in enumerate(zip(days, days_fr), start=1):
+        print(f"{i} {d} = {d_fr} in French")
