@@ -13,7 +13,7 @@ class MyColor:
         else:
             raise AttributeError
 
-    # use __getattr__ to dynamically return a value
+    # use __setattr__ to dynamically set a value
     def __setattr__(self, attr, val):
         if attr == "rgbcolor":
             self.red = val[0]
@@ -22,7 +22,7 @@ class MyColor:
         else:
             super().__setattr__(attr, val)
 
-    # use __getattr__ to dynamically return a value
+    # use __dir__ to return a list of all available attributes
     def __dir__(self):
         return "red", "green", "blue", "rgbcolor", "hexcolor"
 
